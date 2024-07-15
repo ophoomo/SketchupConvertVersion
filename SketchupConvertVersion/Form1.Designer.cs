@@ -100,7 +100,7 @@
             button3.Name = "button3";
             button3.Size = new Size(320, 38);
             button3.TabIndex = 6;
-            button3.Text = "Singel File";
+            button3.Text = "Single File";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
