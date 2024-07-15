@@ -17,6 +17,8 @@ extern "C" {
 @enum SUModelVersion
 @brief SketchUp model file format version
 @since SketchUp 2014, API 2.0
+@note Starting with SketchUp 2021, SketchUp is using a the same file format across versions.
+  For instance, SketchUp 2021 can open a file made in SketchUp 2022.
 */
 enum SUModelVersion {
   SUModelVersion_SU3,     ///< SketchUp 3
@@ -33,10 +35,9 @@ enum SUModelVersion {
   SUModelVersion_SU2018,  ///< SketchUp 2018
   SUModelVersion_SU2019,  ///< SketchUp 2019
   SUModelVersion_SU2020,  ///< SketchUp 2020
-  SUModelVersion_SU2021,  ///< SketchUp 2021
-
-  SUModelVersion_Current = SUModelVersion_SU2021  ///< The most current version supported. Added in
-                                                  ///< SketchUp 2022, API 10.0.
+  SUModelVersion_SU2021,  ///< "Versionless" file format. Starting with SketchUp 2021.
+  SUModelVersion_Current = SUModelVersion_SU2021  ///< The most current version supported.
+                                                  ///< Added in SketchUp 2022, API 10.0.
 };
 
 #ifdef __cplusplus

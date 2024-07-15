@@ -82,7 +82,10 @@ SU_RESULT SUInstancePathPopInstance(SUInstancePathRef instance_path);
 /**
 @brief Sets a \ref SUEntityRef to an \ref SUInstancePathRef.
 @param[in] instance_path The instance path object.
-@param[in] entity        The the entity to be set as a leaf in instance path.
+@note Since SketchUp 2023.1, API version 11.1 you can unset the leaf entity by passing an SU_INVALID
+        entity ref.
+@param[in] entity        The entity to be set as a leaf in instance path or SU_INVALID if the
+        leaf should be removed.
 @related SUInstancePathRef
 @return
 - \ref SU_ERROR_NONE on success

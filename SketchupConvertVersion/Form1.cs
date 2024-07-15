@@ -86,14 +86,18 @@ namespace SketchupConvertVersion
                 if (sketchup.convertSingel(progressBar1))
                 {
                     MessageBox.Show("Convert Success");
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Convert Error");
                 }
                 GC.Collect();
             }
             comboBox1.Enabled = true;
-            button1.Enabled = true;
+            if (folderBrowserDialog1.SelectedPath != "" && folderBrowserDialog1.SelectedPath != null)
+            {
+                button1.Enabled = true;
+            }
             button2.Enabled = true;
             button3.Enabled = true;
         }

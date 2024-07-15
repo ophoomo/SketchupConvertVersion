@@ -8,11 +8,45 @@
 #include <SketchUpAPI/initialize.h>
 #include <SketchUpAPI/model/model.h>
 
+// SUModelVersion_SU3,     ///< SketchUp 3
+// SUModelVersion_SU4,     ///< SketchUp 4
+// SUModelVersion_SU5,     ///< SketchUp 5
+// SUModelVersion_SU6,     ///< SketchUp 6
+// SUModelVersion_SU7,     ///< SketchUp 7
+// SUModelVersion_SU8,     ///< SketchUp 8
+// SUModelVersion_SU2013,  ///< SketchUp 2013
+// SUModelVersion_SU2014,  ///< SketchUp 2014
+// SUModelVersion_SU2015,  ///< SketchUp 2015
+// SUModelVersion_SU2016,  ///< SketchUp 2016
+// SUModelVersion_SU2017,  ///< SketchUp 2017
+// SUModelVersion_SU2018,  ///< SketchUp 2018
+// SUModelVersion_SU2019,  ///< SketchUp 2019
+// SUModelVersion_SU2020,  ///< SketchUp 2020
+// SUModelVersion_SU2021,  ///< "Versionless" file format. Starting with SketchUp 2021.
+// SUModelVersion_Current = SUModelVersion_SU2021 
 
 SUModelVersion get_version(int version)
 {
 	switch (version)
 	{
+		case 3:
+			return SUModelVersion_SU3;
+		case 4:
+			return SUModelVersion_SU4;
+		case 5:
+			return SUModelVersion_SU5;
+		case 6:
+			return SUModelVersion_SU6;
+		case 7:
+			return SUModelVersion_SU7;
+		case 8:
+			return SUModelVersion_SU8;
+		case 2013:
+			return SUModelVersion_SU2013;
+		case 2014:
+			return SUModelVersion_SU2014;
+		case 2015:
+			return SUModelVersion_SU2015;
 		case 2016:
 			return SUModelVersion_SU2016;
 		case 2017:

@@ -246,7 +246,7 @@ Assumed to be UTF-8 encoded.
 SU_RESULT SUTextureSetFileName(SUTextureRef texture, const char* name);
 
 /**
-@brief Retrieves the image file name of a texture object. A full path may be
+@brief Retrieves the image file basename of a texture object. A full path may be
        stored with the texture, but this method will always return a file name
        string with no path. If the texture was created from an
        \ref SUImageRepRef created with SUImageRepLoadFile() then this will
@@ -255,6 +255,7 @@ SU_RESULT SUTextureSetFileName(SUTextureRef texture, const char* name);
 @param[in]  texture   The texture object.
 @param[out] file_name The file name retrieved.
 @related SUTextureRef
+@see SUTextureGetFilePath
 @return
 - \ref SU_ERROR_NONE on success
 - \ref SU_ERROR_INVALID_INPUT if texture is not a valid object
@@ -264,6 +265,27 @@ SU_RESULT SUTextureSetFileName(SUTextureRef texture, const char* name);
   SUStringRef object
 */
 SU_RESULT SUTextureGetFileName(SUTextureRef texture, SUStringRef* file_name);
+
+/**
+@brief Retrieves the image file path of a texture object.
+
+If the texture was created from an \ref SUImageRepRef created with SUImageRepLoadFile()
+then this will return only the file extension representing the file format of the image
+data (e.g. ".png").
+
+@param[in]  texture   The texture object.
+@param[out] file_path The file path retrieved.
+@related SUTextureRef
+@since SketchUp 2023.1, API 11.1
+@return
+- \ref SU_ERROR_NONE on success
+- \ref SU_ERROR_INVALID_INPUT if \p texture is not a valid object
+- \ref SU_ERROR_GENERIC if the \p texture is an unknown file type
+- \ref SU_ERROR_NULL_POINTER_OUTPUT if \p file_path is NULL
+- \ref SU_ERROR_INVALID_OUTPUT if \p file_path does not point to a valid \ref
+  SUStringRef object
+*/
+SU_RESULT SUTextureGetFilePath(SUTextureRef texture, SUStringRef* file_path);
 
 /**
 @brief  Retrieves the value of the flag that indicates whether a texture object

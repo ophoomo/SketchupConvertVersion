@@ -814,13 +814,14 @@ SU_RESULT SUEntitiesGetActiveSectionPlane(SUEntitiesRef entities, SUSectionPlane
 /**
 @brief Set the active section plane for this entities object.
 @since SketchUp 2021.1, API 9.1
+@bug Before SketchUp 2023.1 (API 11.1) this function would not accept SU_INVALID as a valid
+        \p section_plane value and would have returned SU_ERROR_INVALID_INPUT instead
 @param[in] entities
 @param[in] section_plane The section plane to activate or \p SU_INVALID if none should be active.
 @related SUEntitiesRef
 @return
 - \ref SU_ERROR_NONE on success
 - \ref SU_ERROR_INVALID_INPUT if \p entities is not a valid object.
-- \ref SU_ERROR_INVALID_INPUT if \p section_plane is not a valid object.
 - \ref SU_ERROR_INVALID_ARGUMENT if \p section_plane doesn't belong to \p entities.
  */
 SU_RESULT SUEntitiesSetActiveSectionPlane(SUEntitiesRef entities, SUSectionPlaneRef section_plane);

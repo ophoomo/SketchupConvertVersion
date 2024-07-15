@@ -56,6 +56,7 @@ DEFINE_SU_TYPE(SUModelRef)
 DEFINE_SU_TYPE(SUOpeningRef)
 DEFINE_SU_TYPE(SUOptionsManagerRef)
 DEFINE_SU_TYPE(SUOptionsProviderRef)
+DEFINE_SU_TYPE(SUOverlayRef)
 DEFINE_SU_TYPE(SUPolyline3dRef)
 DEFINE_SU_TYPE(SURenderingOptionsRef)
 DEFINE_SU_TYPE(SUSceneRef)
@@ -132,7 +133,8 @@ enum SURefType {
   SURefType_LineStyle,                  ///< SULineStyleRef type
   SURefType_LineStyleManager,           ///< SULineStyleManagerRef type
   SURefType_Selection,                  ///< SUSelectionRef type
-  SURefType_LayerFolder                 ///< SULayerFolderRef type
+  SURefType_LayerFolder,                ///< SULayerFolderRef type
+
 };
 
 #pragma pack(pop)

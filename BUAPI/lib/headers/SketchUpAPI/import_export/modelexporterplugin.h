@@ -1,4 +1,4 @@
-﻿// Copyright 2012-2020 Trimble Inc. All Rights Reserved.
+// Copyright 2012-2020 Trimble Inc. All Rights Reserved.
 
 /**
  * @file
@@ -141,6 +141,7 @@ class SketchUpModelExporterInterface {
 ////////////////////////////////////////////////////////////////////////////////
 
 #ifdef __OBJC__
+  #import <Foundation/Foundation.h>
 /** Each Mac plugin should support this simple protocol.
  */
 @protocol SketchUpModelExporterPlugin<NSObject>

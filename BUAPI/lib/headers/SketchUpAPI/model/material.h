@@ -22,6 +22,7 @@ extern "C" {
 @brief  References a material object.
 */
 
+
 /**
 @enum SUMaterialType
 @brief Indicates material type.
@@ -380,6 +381,7 @@ SU_RESULT SUMaterialGetColorizeDeltas(
 - \ref SU_ERROR_SERIALIZATION if the serialization operation itself fails
 */
 SU_RESULT SUMaterialWriteToFile(SUMaterialRef material, const char* file_path);
+
 
 #ifdef __cplusplus
 }  // extern "C"
